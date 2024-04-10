@@ -47,7 +47,7 @@
 body {
     margin: 0;
     padding: 0;
-    width: 1440px;
+    max-width: 1440px;
 }
 
 .text-accent {
@@ -189,15 +189,37 @@ header {
 }
 
 #tutorial_container {
-    display: flex;
-    gap: 40px;
-    align-items: center;
-    justify-content: center;
-    padding: 0 100px;
+    display: grid;
+    grid-template-columns: repeat(4, min-content);
+    justify-content: space-evenly;
     text-align: left;
 }
 
 .tutorial {
+    position: relative;
+
+    .preview {
+        position: relative;
+        width: min-content;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 64px;
+            aspect-ratio: 1;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: url('assets/img/preview_play.png');
+            background-size: 25%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: rgba(255, 255, 255, 0.75);
+            border: none;
+            border-radius: 50%;
+        }
+    }
+
     h2 {
         font-family: "Source Sans Bold";
         font-size: 16px;
