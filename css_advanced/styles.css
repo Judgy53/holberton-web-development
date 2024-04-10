@@ -310,3 +310,40 @@ header {
         font-size: 14px;
     }
 }
+
+/* F.A.Q. */
+#faq {
+    color: var(--clr-text-dark);
+    text-align: center;
+    padding: 70px 0;
+
+    h1 {
+        font-family: "Source Sans Light";
+        font-size: 60px;
+    }
+}
+
+#question-container {
+    text-align: left;
+
+    .question-row {
+        display: grid;
+        grid-template-columns: repeat(2, min-content);
+        justify-content: space-evenly;
+    }
+
+    .question {
+        width: 350px;
+
+        h2 {
+            font-family: "Source Sans Bold";
+            font-size: 16px;
+        }
+
+        p {
+            font-family: "Source Sans Regular";
+            font-size: 14px;
+            opacity: 0.5;
+        }
+    }
+}
