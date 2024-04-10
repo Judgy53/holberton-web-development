@@ -47,9 +47,11 @@
 body {
     margin: 0;
     padding: 0;
-    max-width: 1440px;
+    width: 100vw;
+    max-width: 100%;
 }
 
+/* Useful reuseable classes */
 .text-accent {
     color: var(--clr-accent);
     font-family: "Source Sans Bold";
@@ -64,6 +66,21 @@ body {
     border-radius: 50%;
 }
 
+button {
+    margin-top: 25px;
+    padding: 10px 20px;
+    background-color: var(--clr-accent);
+    border: none;
+    border-radius: 22px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Source Sans Semibold";
+    font-size: 14px;
+    color: var(--clr-text);
+}
+
+/* Header */
 header {
     margin: 35px 170px -65px 170px;
 
@@ -83,6 +100,7 @@ header {
     }
 }
 
+/* Title */
 #main_part {
     padding-top: 100px;
     background-image: url('assets/img/header_bg.png');
@@ -91,6 +109,7 @@ header {
     text-align: center;
     font-family: "Source Sans Bold";
     color: var(--clr-text);
+    aspect-ratio: 1.31; /* Approx of bg image aspect ratio */
 }
 
 #main_part__title {
@@ -105,28 +124,16 @@ header {
         word-spacing: 50px;
         text-transform: uppercase;
     }
-
-    button {
-        margin-top: 25px;
-        padding: 10px;
-        background-color: var(--clr-accent);
-        border: none;
-        border-radius: 22px;
-        text-align: center;
-        text-decoration: none;
-        text-transform: uppercase;
-        font-family: "Source Sans Semibold";
-        font-size: 14px;
-        color: var(--clr-text);
-    }
 }
 
+/* Pros */
 #main_part__pros {
     padding-top: 150px;
 
     h2 {
         font-family: "Source Sans Light";
         font-size: 32px;
+        margin-bottom: 50px;
     }
 }
 
@@ -145,7 +152,7 @@ header {
     }
 }
 
-
+/* Quotes */
 #part_1_testimonials {
     background-color: var(--clr-accent);
     color: var(--clr-text);
@@ -176,6 +183,7 @@ header {
     }
 }
 
+/* Tutorials */
 #part_2_tutorials {
     color: var(--clr-text-dark);
     text-align: center;
@@ -183,7 +191,7 @@ header {
     
     h1 {
         font-family: "Source Sans Light";
-        font-size: 22px;
+        font-size: 32px;
         margin-bottom: 70px;
     }
 }
@@ -261,5 +269,44 @@ header {
             color: var(--clr-accent);
             opacity: 1;
         }
+    }
+}
+
+/* Membership */
+#membership {
+    background-color: var(--clr-text-dark);
+    color: var(--clr-text);
+    text-align: center;
+    padding: 70px 0;
+    
+    h1 {
+        font-family: "Source Sans Light";
+        font-size: 32px;
+        margin-bottom: 70px;
+    }
+
+    button {
+        margin-top: 50px;
+    }
+}
+
+#membership_container {
+    display: grid;
+    grid-template-columns: repeat(4, min-content);
+    justify-content: space-evenly;
+
+    .member-advantage {
+        width: 250px;
+    }
+
+    h2 {
+        font-family: "Source Sans Semibold";
+        font-size: 18px;
+    }
+
+    p {
+        padding: 0 20px;
+        font-family: "Source Sans Light";
+        font-size: 14px;
     }
 }
